@@ -11,6 +11,7 @@ describe('GitHub Action', () => {
 	beforeEach(() => {
 		spyGetInput = spyOn(core, 'getInput');
 		spySetFailed = spyOn(core, 'setFailed');
+		github.context.payload = null as any;
 	});
 
 	describe('Success cases', () => {
