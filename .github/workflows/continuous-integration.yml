@@ -16,6 +16,7 @@ jobs:
       - run: npm run ci
         name: Build and test
       - uses: ./
+        name: Run Action
         with:
           directory: 'dist'
           ecmaVersion: 'es5'
