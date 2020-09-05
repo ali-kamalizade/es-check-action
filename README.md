@@ -1,5 +1,7 @@
 # es-check-action
 
+![Checks](https://github.com/ali-kamalizade/es-check-action/workflows/Checks/badge.svg?branch=master)
+
 This GitHub Action checks JavaScript files against a specified version of ECMAScript (ES). If a specified file's ES version doesn't match the ES version argument, this action will throw an error and log the files that didn't match the check.
 
 In modern JavaScript builds, files are bundled up so they can be served in an optimized manner in the browsers. It is assumed by developers that future JavaScript—like ES8 will be transpiled (changed from future JavaScript to current JavaScript) appropriately by a tool like Babel or TypeScript. Sometimes there is an issue where files are not transpiled which would cause issues in browsers who don't support all the latest features (e.g. IE11).
