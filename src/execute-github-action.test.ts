@@ -1,7 +1,6 @@
 import * as core from "@actions/core";
 import {executeGitHubAction} from './execute-github-action';
 import {GithubActionInputType} from "./action.interface";
-import * as github from '@actions/github';
 
 describe('GitHub Action', () => {
 
@@ -11,7 +10,6 @@ describe('GitHub Action', () => {
 	beforeEach(() => {
 		spyGetInput = spyOn(core, 'getInput');
 		spySetFailed = spyOn(core, 'setFailed');
-		github.context.payload = null as any;
 	});
 
 	describe('Success cases', () => {
@@ -55,13 +53,6 @@ describe('GitHub Action', () => {
 			expect(spySetFailed).toHaveBeenCalled();
 		});
 
-		it('should fail if there is an error after es-check was run successfully', () => {
-			spyOn(JSON, 'stringify').and.throwError('Simulating GitHub Action payload fail');
-			spyAndReturnInputValue('example-dist', 'es5', '**/*es5*.js');
-			executeGitHubAction();
-
-			expect(spySetFailed).toHaveBeenCalled();
-		});
 	})
 
 	function spyAndReturnInputValue(dist: string = '', ecmaVersion: string = '', filesGlob = '') {
