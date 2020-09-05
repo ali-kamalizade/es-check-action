@@ -15,3 +15,8 @@ jobs:
         name: Install dependencies
       - run: npm run ci
         name: Build and test
+      - uses: ./
+        with:
+          directory: 'dist'
+          ecmaVersion: 'es5'
+          files: '*.js'
