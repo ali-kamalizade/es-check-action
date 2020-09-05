@@ -19,5 +19,5 @@ jobs:
         name: Run Action
         with:
           directory: 'dist'
-          ecmaVersion: 'es5'
+          ecmaVersion: 'es6'
           files: '*.js'
