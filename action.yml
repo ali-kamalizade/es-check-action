@@ -1,0 +1,22 @@
+name: 'es-check-action'
+description: 'Check JavaScript files ES version against a specified ES version'
+author: 'Ali Kamalizade'
+branding:
+  color: blue
+  icon: check-circle
+inputs:
+  directory:  # id of input
+    description: 'Directory which should be checked'
+    required: true
+    default: 'dist'
+  ecmaVersion: # id of input
+    description: 'Define the ECMAScript version to check for against a glob of JavaScript files'
+    required: false
+    default: 'es5'
+  files: # id of input
+    description: 'A glob of files to test the ECMAScript version against'
+    required: false
+    default: '*.js'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
