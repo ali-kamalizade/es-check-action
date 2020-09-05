@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "GitHub Action to check JavaScript files against a specified version of ECMAScript (ES)",
   "main": "dist/index.js",
+  "private": true,
   "scripts": {
     "build": "ncc build src/index.ts --minify",
     "build:watch": "npm run build -- --watch",
