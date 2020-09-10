@@ -34,7 +34,11 @@
     "es"
   ],
   "author": "Ali Kamalizade",
+  "bugs": {
+    "url": "https://github.com/ali-kamalizade/es-check-action/issues"
+  },
   "repository": {
+    "type": "git",
     "url": "https://github.com/ali-kamalizade/es-check-action"
   },
   "license": "MIT"
