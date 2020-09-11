@@ -12,7 +12,7 @@ const inputs = {
 export function executeGitHubAction() {
 	try {
 		console.info(`Checking files in: ${inputs.pathToDistFolder()}!`);
-		execSync(`npx es-check ${inputs.ecmaVersion()} ./${inputs.pathToDistFolder()}/${inputs.filesGlob()} --verbose`);
+		execSync(`npx es-check ${inputs.ecmaVersion()} ./${inputs.pathToDistFolder()}/${inputs.filesGlob()} --verbose`, {stdio: 'inherit'});
 	} catch (error) {
 		console.error(error.message);
 		core.setFailed(error.message);
