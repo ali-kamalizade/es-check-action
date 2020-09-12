@@ -25,7 +25,7 @@ In modern JavaScript builds, files are bundled up so they can be served in an op
 Create a [workflow](https://docs.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow) and paste this
 
 ```yaml
-- uses: actions/es-check-action@v1
+- uses: actions/es-check-action@1.0.2
   with:
     directory: 'dist'
     ecmaVersion: 'es5'
