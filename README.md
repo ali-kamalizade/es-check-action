@@ -12,7 +12,7 @@ In modern JavaScript builds, files are bundled up so they can be served in an op
 
 - Speed: this check shouldn't take more than a few seconds
 - Flexibility: choose which files should be checked
-- Compability: choose the ES version you want to target. `ES5` is a good choice to have maximum compatibility
+- Compatibility: choose the ES version you want to target. `ES5` is a good choice to have maximum compatibility
 
 ## Inputs
 
